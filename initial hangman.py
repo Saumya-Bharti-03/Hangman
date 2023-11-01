@@ -105,7 +105,15 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             click_pos = event.pos
 
-            # Checking  for correct letter...to be added
+            # Checking  for correct letter
+             for button, letter in buttons:
+                if button.collidepoint(click_pos):
+                    if letter not in word:
+                        hangman_status += 1
+                    if hangman_status == 6:
+                        game_over = True
+                    guessed.append(letter)
+                    buttons.remove([button, letter])
 
             # displaying the images accordingly
             for i in range(5):
