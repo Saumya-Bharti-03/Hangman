@@ -57,7 +57,17 @@ def draw_buttons(buttons):
         pygame.draw.rect(screen, (0, 0, 0), box, 2)
 
 
-# To display the word...to be added
+# To display the word
+def display_guess():
+    display_text = ''
+    for letter in word:
+        if letter in guessed:
+            display_text += f"{letter} "
+        else:
+            display_text += '_ '
+
+    text = letter_font.render(display_text, True, (0, 0, 0))
+    screen.blit(text, (400, 200))
 
 
 images = []
