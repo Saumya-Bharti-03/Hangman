@@ -155,5 +155,14 @@ while running:
     clock.tick(50)
     pygame.display.update()
 
-    # Displaying the result text...to be added
+    # Displaying the result text
+    if game_over:
+        screen.fill((255, 255, 255))
+        text = game_font.render(game_text, True, (0, 0, 0))
+        text_rect = text.get_rect(center=(width // 2, height // 2))
+        screen.blit(text, text_rect)
+        pygame.display.update()
+        pygame.time.delay(3000)
+        pygame.quit()
+        sys.exit()
 pygame.quit()
