@@ -74,7 +74,8 @@ images = []
 hangman_status = 0
 
 # creating the words list
-words = ['PYGAME', 'PYTHON', 'JAVA', 'HELLO', 'WORLD', 'HANGMAN', 'TIME', 'TURTLE', 'RANDOM']
+#updating with some more words
+words = ['PYGAME', 'PYTHON', 'JAVA', 'HELLO', 'WORLD', 'HANGMAN', 'TIME', 'TURTLE', 'RANDOM','PRACTICE','CODING', 'PANDAS','NUMPY','STACK','QUEUE','TUPLE','DICTIONARY','LIST','COMPILE','ERROR','EXCEPTION','THREAD','DEFAULT','SWITCH','STRING']
 word = random.choice(words)
 guessed = []
 
